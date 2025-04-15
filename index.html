@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+      
+    <body>
+
+        <!-- -------------------------HEADER SECTION ------------------------- -->
+        <header>
+            <div id="nav">
+                <div id="title"> Find Your film </div>
+                <a id="listlink" href="watchlist.html">My Watchlist</a>
+            </div>
+        </header>
+
+        <!-- -------------------------SEARCHBAR SECTION ------------------------- -->
+
+        <div id="searchbar">
+            <img src="/images/searchicon.jpg" id="search-icon">
+            <input type="text" id="name" placeholder="Seach for a movie">
+            <div id="divider"></div>
+            <button id="searchbtn">Search</button>
+        </div>
+
+        <!-- -------------------------IDLESTATE  ------------------------- -->
+
+        <div class="nodisplay"> 
+            <image id="idleimg"src="/images/Icon.png"></image>
+            <div id="idletitle">Start exploring</div>
+        </div>
+
+        <!-- -------------------------POPULATED STATE ------------------------- -->
+
+        <div id="movies" class="movies">
+
+            <div class="movie">
+                <image class="movieimg" src="/images/trial1.png"></image>
+
+                <div class="description">
+
+                    <div class="section1">
+                        <div class="movietitle" id="movietitle">Blade Runner</div>
+                        <image class="staricon" id="staricon" src="/images/staricon.png"></image>
+                        <div class="rating" id="rating"> 8.5</div>
+                    </div>
+
+                    <div class="section2">
+
+                        <div class="time" id="time">164 min</div>
+                        <div class="genre" id="genre">Action, Drama, Mystery</div>
+                        <button class="addbtn" id="addbutton">
+                            <image class="addbuttonimg" src="/images/addicon.png"></image>
+                            Watchlist
+                        </button>
+                    
+                        <button class="nodisplay" id="removebutton">
+                            <image class="removebuttonimg"src="/images/removeicon.png"></image>
+                            Remove
+                        </button>
+
+                    </div>
+                    
+                    <div class="section3">
+                        <p class="moviedesc" id="moviedesc">Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, 
+                            who's been missin...<span><button class="readmore" id="readmore" > Read more</button></span></p>
+                    </div>
+                 
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- -------------------------NO RESPONSE STATE ------------------------- -->
+        <div class="nodisplay"> //nores
+            <p id="norestext">Unable to find what you’re looking for. Please try another search.</p>
+
+        </div>
+
+        <!-- -------------------------EMPTY WATCHLIST STATE ------------------------- -->
+        <div class="nodisplay"> //emptywatchlist
+            <p id="emptytext">Your watchlist is looking a little empty...</p>
+            <button class="addmoviebtn" id="addbutton">
+                <image class="addmovieimg" src="/images/addicon.png"></image>
+                Lets add some movies!
+            </button>
+        </div>
+        
+        <!-- ---------------------------------------------------------------------->
+
+
+        <script src="scripts/index.js" type="module"></script>
+
+    </body>
+</html>
+

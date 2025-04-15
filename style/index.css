@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+}
+ 
+/* --------------------------------HEADER SECTION ------------------------------ */
+header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.868), rgba(0, 0, 0, 0.554)), 
+        url("/images/headerback.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    height: 130px;
+    width: 100%
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    padding: 46px 25px 0px 25px;
+}
+
+#title{
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 30.79px;
+    line-height: 23.77px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    letter-spacing: 4.5%;
+    text-decoration: none;
+}
+
+#listlink{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 20px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+/* --------------------------------SEARCHBAR SECTION ------------------------------ */
+
+#searchbar {
+    margin-top: -19px;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    align-items: center;
+    height: 38px;
+    background-color: #FFFFFF;
+    border: #D1D5DB 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 10px; /* spacing inside box */
+    gap: 8px; /* space between icon, input, and button */
+}
+
+#search-icon {
+    height: 20px;
+    width: 16px;
+    object-fit: contain;
+}
+
+#name{
+    width: 75%;
+    border: none;
+    background-color: none;
+    line-height: 20px;
+    font-size:14px;
+    font-family: "Inter", sans-serif;
+    outline: none;
+}
+
+#divider {
+    width: 1px;
+    height: 60%;
+    background-color: #D1D5DB;
+    margin: auto 8px;
+}
+
+#searchbtn{
+    width: 25%;
+    border: #D1D5DB 2px solid;
+    background: #F9FAFB;
+    line-height: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#searchbtn:hover{
+    transform: scale(0.9)
+}
+
+
+
+/* --------------------------------IDLE STATE ------------------------------ */
+
+.idlestate{
+    height: calc(100% - 227px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8.75px;
+
+}
+
+#idleimg{
+    width: 70px;
+    height: 61.25px;
+}
+
+#idletitle{
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #DFDDDD;
+    line-height: 20px;
+    font-size: 18px;
+}
+
+.nodisplay{
+    display: none;
+}
+/* ----------------------------- POPULATED STATE ------------------------------ */
+
+.movies{
+    border: red solid 2px;
+    height: calc(100% - 227px);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    overflow-y: scroll;
+}
+
+.movie{
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    padding-bottom: 21px;
+    border-bottom: #b9babc solid 1.5px;
+}
+
+.movie:last-child {
+    border-bottom: none;
+  }
+
+.movieimg{
+    width: 80px;
+    height: 120px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+
+/* -------------------section 1----------------- */
+.section1, .section2{
+    display: flex;
+    align-items: center;
+}
+
+.movietitle{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 15px; 
+}
+
+.staricon{
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+}
+
+.rating{
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+/* -------------------section 2----------------- */
+
+.section2{
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    gap: 18px;
+}
+
+.addbtn, .removebtn{
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.addbuttonimg, .removebuttonimg{
+    width: 10px;
+    height: 10px;
+}
+
+/* -------------------section 3----------------- */
+
+.section3{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #6B7280;
+}
+.readmore {
+    display: inline-block;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*-----------------NO RESPONSE STATE ------------- */
+.noresponse{
+    height: calc(100% - 227px);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#norestext{
+    width: 321px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #c4c1c1;
+}
+
+/*-----------------EMPTY WATCHLIST STATE ------------- */
+
+.emptywatchlist{
+    height: calc(100% - 227px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.addmoviebtn{
+    background:none;
+    border: none;
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#emptytext{
+    width: 371px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    color: #c4c1c1;
+}

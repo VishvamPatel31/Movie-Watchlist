@@ -29,8 +29,8 @@ header {
 #title{
     font-family: "Inter", sans-serif;
     font-weight: 800;
-    font-size: 30.79px;
-    line-height: 23.77px;
+    font-size: 28px;
+    line-height: 20.77px;
     color: #FFFFFF;
     vertical-align: middle;
     letter-spacing: 4.5%;
@@ -133,13 +133,12 @@ header {
 /* ----------------------------- POPULATED STATE ------------------------------ */
 
 .movies{
-    border: red solid 2px;
-    height: calc(100% - 227px);
+    /* height: calc(100% - 227px); */
     margin: 20px;
     display: flex;
     flex-direction: column;
     gap: 22px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .movie{
@@ -231,6 +230,15 @@ header {
     text-decoration: none;
 }
 
+/* Add this in your CSS */
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+
 /*-----------------NO RESPONSE STATE ------------- */
 .noresponse{
     height: calc(100% - 227px);
@@ -281,4 +289,58 @@ header {
     font-family: "Inter", sans-serif;
     font-weight: bold;
     color: #c4c1c1;
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 17.5px; /* 16px + 15px = ~17.5px base for rem scaling */
+    }
+
+    #title {
+        font-size: 2.625rem;
+    }
+
+    #listlink {
+        font-size: 0.875rem;
+    }
+
+    #searchbtn {
+        font-size: 1rem;
+    }
+
+    #name {
+        font-size: 1rem;
+    }
+
+    .movietitle {
+        font-size: 1.25rem;
+    }
+
+    .rating {
+        font-size: 0.875rem;
+    }
+
+    .section2 {
+        font-size: 0.875rem;
+    }
+
+    .addbtn,
+    .removebtn {
+        font-size: 0.875rem;
+    }
+
+    .section3 {
+        font-size: 1rem;
+    }
+
+    .readmore {
+        font-size: 1rem;
+    }
+
+    #idletitle,
+    #norestext,
+    #emptytext,
+    .addmoviebtn {
+        font-size: 1.25rem;
+    }
 }

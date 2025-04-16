@@ -34,7 +34,8 @@ function renderWatchlist(){
                 </div>
                 
                 <div class="section3">
-                    <p class="moviedesc" id="moviedesc">${movie.Plot}<span><button class="readmore" id="readmore" > Read more</button></span></p>
+                    <p class="moviedesc clamp">${movie.Plot}</p>
+                    <button class="readmore">Read more</button>
                 </div>
              
             </div>
@@ -51,6 +52,25 @@ function renderWatchlist(){
         }
         
     }
+
+    let toggleread = document.querySelectorAll(".readmore")
+    toggleread.forEach(function(btn){
+    btn.addEventListener("click", function(e){
+            const paragraph = e.target.parentElement.querySelector(".moviedesc")
+            const readbtn = e.target
+            console.log(paragraph)
+
+            if (paragraph.classList.contains("clamp")) {
+                paragraph.classList.remove("clamp")
+                readbtn.textContent = "Read less"
+            } else {
+                paragraph.classList.add("clamp")
+                readbtn.textContent = "Read more"
+            }
+        })
+    })
+
+
     let removebtns = document.querySelectorAll("#removebutton")
     
     removebtns.forEach(function(btn){

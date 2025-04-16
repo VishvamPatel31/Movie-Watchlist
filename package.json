@@ -1,0 +1,13 @@
+{
+    "name": "movie-watchlist",
+    "version": "1.0.0",
+    "description": "",
+    "main": "scripts/index.js",
+    "scripts": {
+      "start": "nodemon scripts/index.js --quiet"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.1"
+    }
+  }
+  

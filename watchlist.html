@@ -28,44 +28,10 @@
 
         <!-- -------------------------POPULATED STATE ------------------------- -->
 
-        <div id="movies" class="nodisplay">
-
-            <div class="movie">
-                <image class="movieimg" src="/images/trial1.png"></image>
-
-                <div class="description">
-
-                    <div class="section1">
-                        <div class="movietitle" id="movietitle">Blade Runner</div>
-                        <image class="staricon" id="staricon" src="/images/staricon.png"></image>
-                        <div class="rating" id="rating"> 8.5</div>
-                    </div>
-
-                    <div class="section2">
-
-                        <div class="time" id="time">164 min</div>
-                        <div class="genre" id="genre">Action, Drama, Mystery</div>
-                    
-                        <button class="removebtn" id="removebutton">
-                            <image class="removebuttonimg"src="/images/removeicon.png"></image>
-                            Remove
-                        </button>
-
-                    </div>
-                    
-                    <div class="section3">
-                        <p class="moviedesc" id="moviedesc">Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, 
-                            who's been missin...<span><button class="readmore" id="readmore" > Read more</button></span></p>
-                    </div>
-                 
-                </div>
-
-            </div>
-
-        </div>
+        <div id="watchlist" class="nodisplay"> </div>
 
         <!-- -------------------------EMPTY WATCHLIST STATE ------------------------- -->
-        <div class="emptywatchlist"> 
+        <div id="emptywatchlist" class="emptywatchlist"> 
             <p id="emptytext">Your watchlist is looking a little empty...</p>
             <button class="addmoviebtn" id="addbutton">
                 <image class="addmovieimg" src="/images/addicon.png"></image>
@@ -76,7 +42,7 @@
         <!-- ---------------------------------------------------------------------->
 
 
-        <script src="scripts/index.js" type="module"></script>
+        <script src="scripts/watchlist.js" type="module"></script>
 
     </body>
 </html>

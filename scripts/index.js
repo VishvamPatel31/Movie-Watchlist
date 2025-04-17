@@ -42,43 +42,74 @@ async function rendermovies(movies){
         for (let movie of movies ){
         const response = await fetch(`https://www.omdbapi.com/?apikey=5aa9157c&i=${movie.imdbID}&plot=full`)
         const data = await response.json()
-            htm += `
-                <div class="movie">
+
+        // Get the 'movies' array from localStorage, or use an empty array if it's null
+        const savedMovies = JSON.parse(localStorage.getItem("movies")) || []
+        // Check if the current movie already exists in the savedMovies
+        let isSaved = false
+        for (let i = 0; i < savedMovies.length; i++) {
+            if (savedMovies[i].Poster === movie.Poster) {
+                isSaved = true
+                break
+            }
+        }
+        
+        htm += `
+            <div class="movie">
                 <image class="movieimg" src="${movie.Poster}"></image>
-
+        
                 <div class="description">
-
+        
                     <div class="section1">
                         <div class="movietitle" id="movietitle">${movie.Title}</div>
                         <image class="staricon" id="staricon" src="/images/staricon.png"></image>
                         <div class="rating" id="rating"> ${data.imdbRating}</div>
                     </div>
-
+        
                     <div class="section2">
-
                         <div class="time" id="time">${data.Runtime}</div>
                         <div class="genre" id="genre">${data.Genre}</div>
-                        <button class="addbtn" id="addbutton">
+        
+                        <button class="${isSaved ? 'nodisplay' : 'addbtn'}" id="addbutton">
                             <image class="addbuttonimg" src="/images/addicon.png"></image>
                             Watchlist
                         </button>
-                        <button class="nodisplay" id="removebutton">
+                        <button class="${isSaved ? 'removebtn' : 'nodisplay'}" id="removebutton">
                             <image class="removebuttonimg" src="/images/removeicon.png"></image>
                             Remove
                         </button>
-
                     </div>
-                    
+        
                     <div class="section3">
-                        <p class="moviedesc" id="moviedesc">${data.Plot}<span><button class="readmore" id="readmore" > Read more</button></span></p>
+                        <p class="moviedesc clamp">${data.Plot}</p>
+                        <button class="readmore">Read more</button>
                     </div>
-                 
+        
                 </div>
-
-            </div>`
-         
+            </div>
+        `
+        
     }
     moviesection.innerHTML = htm
+
+    let toggleread = document.querySelectorAll(".readmore")
+    toggleread.forEach(function(btn){
+    btn.addEventListener("click", function(e){
+            const paragraph = e.target.parentElement.querySelector(".moviedesc")
+            const readbtn = e.target
+            console.log(paragraph)
+
+            if (paragraph.classList.contains("clamp")) {
+                paragraph.classList.remove("clamp")
+                readbtn.textContent = "Read less"
+            } else {
+                paragraph.classList.add("clamp")
+                readbtn.textContent = "Read more"
+            }
+        })
+    })
+
+
     let addbtns = document.querySelectorAll("#addbutton")
     addbtns.forEach(function(btn){
         btn.addEventListener("click", function(e){

@@ -83,7 +83,4 @@ A responsive movie search and watchlist web application using the OMDB API. User
 - Responsive UI that looks great on mobile and desktop.
 - Toggle movie plot summaries with “Read more / Read less”.
 
----
-
-## 📁 Folder Structure
 

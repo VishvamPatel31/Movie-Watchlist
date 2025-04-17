@@ -292,6 +292,37 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+    .movies{
+        /* height: calc(100% - 227px); */   
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        width: 98%;
+        /* overflow-y: scroll; */
+        align-items: center;
+    }
+    
+    .movie{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        gap: 21px;
+        padding-bottom: 21px;
+        border-bottom: #b9babc solid 1.5px;
+    }
+
+    .clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .movieimg{
+        width: 100px;
+        height: 130px;
+    }
+
     html {
         font-size: 17.5px; /* 16px + 15px = ~17.5px base for rem scaling */
     }

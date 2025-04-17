@@ -2,9 +2,7 @@
 
 A responsive movie search and watchlist web application using the OMDB API. Users can search for movies, view details, add/remove from their watchlist, and persist data using `localStorage`.
 
-🔗 **Live Site**: [https://amazing-nasturtium-2930f6.netlify.app/](https://amazing-nasturtium-2930f6.netlify.app/)
-
----
+🔗 **Live Site**: [https://amazing-nasturtium-2930f6.netlify.app/)
 
 ## 💡 What I Learned
 
